@@ -33,6 +33,9 @@ const selectedPostId = (state = '', action) => {
     case SELECT_POST:
       return action.post.id
       break
+    case DISMISS_POST:
+      return state === action.post.id ? '' : state
+      break
     default:
       return state
       break
