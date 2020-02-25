@@ -25,6 +25,7 @@ export default class PostListItem extends Component {
         >
           Dismiss Post
         </button>
+        <hr/>
       </div>
     )
   }

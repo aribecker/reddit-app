@@ -1,0 +1,49 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+$leftRightPanelHeight: 500px;
+$leftPanelWidth: 300px;
+$leftPanelMobileWidth: 200px;
+
+.left-right-panel {
+    height: $leftRightPanelHeight;
+
+    .left {
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+      width: $leftPanelWidth;
+      position: relative;
+      background: black;
+      color: white;
+
+      @include media-breakpoint-down(sm) {
+        width: $leftPanelMobileWidth;
+        display: none;
+        &.left-panel-open {
+          display: initial;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+  .right {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: calc(100% - #{$leftPanelWidth});
+    .open-left-panel-button {
+      display: none;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      .open-left-panel-button {
+        display: initial;
+      }
+    }
+    background: lightGrey;
+  }
+}

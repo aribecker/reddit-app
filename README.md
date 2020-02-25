@@ -6,7 +6,7 @@ Sample React / Redux Reddit feed reader
 
   - The plan took me 1hr
   - The total estimate for this plan is 10 hrs
-  - According to this plan, in 6 hrs the app will be fully funcional
+  - According to this plan, in 6 hrs the app will be funcional
   - Investing 4 more hours I would include also animations and pagination
 
 ## STEP 2: DATA. Estimated 2 hrs
@@ -41,10 +41,14 @@ UPDATE: It took me 2:40 hrs, it's more than estimated due to some breaks I took 
 * Details panel without styling
 * Dismiss all posts Redux
 
+ Update:
+ * Forgot to include Read status
+
 ## STEP 4: STYLING. Estimated 1 hr
 
 * List styling
 * Details panel styling
+Update: I'll make just a basic styling here and leave the details for step 6
 
 ## STEP 5: PAGINATION. Estimated 2hrs
 
@@ -52,6 +56,7 @@ UPDATE: It took me 2:40 hrs, it's more than estimated due to some breaks I took 
 
 ## STEP 6: ANIMATIONS AND ERROR HANDLING. Estimated 2 hrs
 
+Update: * Add detailed styling
 * Swipe and animation for left-right panel
 * Post dismiss animation
 * Dismiss All animation
