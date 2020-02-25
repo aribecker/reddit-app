@@ -10,18 +10,19 @@ export default class PostListItem extends Component {
   render() {
     const {
       post,
-      onPostDismiss
+      onPostDismiss,
+      onPostSelect
     } = this.props
     return (
       <div
-        ref={this.postRef}
+        onClick={(event) => {event.stopPropagation(); onPostSelect(post)}}
         className="post-list-item"
       >
         <PostItem
           post={post}
         />
         <button
-          onClick={() => onPostDismiss(post)}
+          onClick={(event) => {event.stopPropagation(); onPostDismiss(post)}}
         >
           Dismiss Post
         </button>

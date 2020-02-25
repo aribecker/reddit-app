@@ -13,11 +13,26 @@ export const getAllPosts = () => (dispatch, getState) => {
   })
 }
 
-const dismissPostUnsafe = post => ({
-  type: types.DISMISS_POST,
-  post
-})
+const dismissPostUnsafe = post => {
+  return {
+    type: types.DISMISS_POST,
+    post
+  }
+}
 
 export const dismissPost = post => (dispatch, getState) => {
   dispatch(dismissPostUnsafe(post))
+}
+
+const selectPostUnsafe = post => {
+  return {
+    type: types.SELECT_POST,
+    post
+  }
+}
+
+export const selectPost = post => {
+  return (dispatch, getState) => {
+    dispatch(selectPostUnsafe(post))
+  }
 }

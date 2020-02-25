@@ -11,7 +11,8 @@ const PostItem = (props) => {
     thumbnail,
     name,
     url,
-    num_comments
+    num_comments,
+    seen
   } = props.post
   
   return (
@@ -37,6 +38,12 @@ const PostItem = (props) => {
       <div>
         <div>
           {num_comments} Comments
+        </div>
+      </div>
+
+      <div>
+        <div>
+          {seen ? 'Seen!' : ''}
         </div>
       </div>
 

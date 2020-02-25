@@ -12,7 +12,8 @@ export default class PostList extends Component {
     const {
       title,
       posts,
-      onPostDismiss
+      onPostDismiss,
+      onPostSelect
     } = this.props;
     return (
       <div
@@ -24,6 +25,7 @@ export default class PostList extends Component {
               key={post.id}
               post={post}
               onPostDismiss={onPostDismiss}
+              onPostSelect={onPostSelect}
             />
           )}
       </div>

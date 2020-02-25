@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { dismissPost, getAllPosts } from '../actions'
+import { dismissPost, getAllPosts, selectPost } from '../actions'
 import { getPosts } from '../reducers/posts'
 import PostList from '../components/PostList'
 
@@ -22,7 +22,7 @@ class PostListContainer extends Component {
         posts={props.posts}
         title="Reddit Posts"
         onPostDismiss={props.dismissPost}
-        onPostSelect={() => console.log('onPostSelect to be impemented')}
+        onPostSelect={props.selectPost}
       />
     )
   }
@@ -38,6 +38,7 @@ export default connect(
   mapStateToProps,
   {
     dismissPost,
-    getAllPosts
+    getAllPosts,
+    selectPost
   }
 )(PostListContainer)

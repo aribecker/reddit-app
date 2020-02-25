@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PostListContainer from './PostListContainer'
 import LeftRightPanel from './LeftRightPanel'
+import DetailsContainer from './DetailsContainer'
 import './App.scss';
 import classNames from "classnames"
 
@@ -11,18 +12,7 @@ export default class App extends Component {
   
   render() {
     const leftPanel = < PostListContainer/>
-    const rightPanel = ( <div>
-      Hello Right Panel!!!
-      Hello Right Panel!!!
-      Hello Right Panel!!! 
-      Hello Right Panel!!!
-      Hello Right Panel!!!<br/>
-      Hello Right Panel!!!
-      Hello Right Panel!!!
-      Hello Right Panel!!! 
-      Hello Right Panel!!!
-      Hello Right Panel!!!<br/>
-    </div>)
+    const rightPanel = <DetailsContainer/>
     return (
       <div className="app">
         < LeftRightPanel

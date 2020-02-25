@@ -2,7 +2,8 @@ import { combineReducers } from 'redux'
 import _ from 'lodash'
 import {
   RECEIVE_POSTS,
-  DISMISS_POST
+  DISMISS_POST,
+  SELECT_POST
 } from '../constants/posts'
 
 const posts = (state = [], action) => {
@@ -13,19 +14,24 @@ const posts = (state = [], action) => {
     case DISMISS_POST:
       return _.filter(state, post => post.id != action.post.id)
       break
+    case SELECT_POST:
+        return _.map(state, post => {
+          let clonedPost = {...post}
+          clonedPost.seen = clonedPost.seen || clonedPost.id === action.post.id
+          return clonedPost
+        })
+      return state
+      break
     default:
       return state
       break
   }
 }
 
-const otherStuff = (state = 0, action) => {
+const selectedPostId = (state = '', action) => {
   switch (action.type) {
-    case RECEIVE_POSTS:
-      return 123
-      break
-    case DISMISS_POST:
-      return 456
+    case SELECT_POST:
+      return action.post.id
       break
     default:
       return state
@@ -35,9 +41,18 @@ const otherStuff = (state = 0, action) => {
 
 export default combineReducers({
   posts,
-  otherStuff
+  selectedPostId
 })
 
 export const getPosts = state => {
   return state.posts
+}
+
+const getSelectedPostFromPostList = (posts = [], selectedPostId = '') => {
+  return _.find(posts, post => {return post.id === selectedPostId})
+}
+
+export const getSelectedPost = state => {
+  const {selectedPostId} = state.posts
+  return getSelectedPostFromPostList(state.posts.posts, selectedPostId)
 }

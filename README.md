@@ -11,7 +11,7 @@ Sample React / Redux Reddit feed reader
 
 ## STEP 2: DATA. Estimated 2 hrs
 
-UPDATE: It took me 2:40 hrs, it's more than estimated due to some breaks I took and sme issues to make my sample project work
+UPDATE: It took me 2:40 hrs, it's more than estimated due to some breaks I took and some issues to make my sample project work
 
 * Copy a sample starter project I have, that includes boiler plates and examples
 * Api and redux for data loading
