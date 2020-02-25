@@ -34,11 +34,14 @@ UPDATE: It took me 2:40 hrs, it's more than estimated due to some breaks I took 
 * Rename and adapt the sample list of my starter project
 
 ## STEP 3: BEHAVIOUR. Estimated 2 hrs
+UPDATE: It took me 2:25 hrs
 
 * Responsive Left-right panel. Using a button to show the left panel. No swipe. No animations
 * Dismiss post Redux
 * Show post Redux
 * Details panel without styling
+
+Update: This item will be implemented in STEP 6
 * Dismiss all posts Redux
 
  Update:

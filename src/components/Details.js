@@ -10,9 +10,24 @@ export default class Details extends Component {
     const {
       post
     } = this.props
+    if (!post) {
+      return null
+    }
     return (
       <div className="details">
-        {JSON.stringify(post)}
+
+        <div>
+          {post.author}
+        </div>
+
+        <div>
+          <img src={post.thumbnail}/>
+        </div>
+        
+        <div>
+          {post.title}
+        </div>
+
       </div>
     )
   }
