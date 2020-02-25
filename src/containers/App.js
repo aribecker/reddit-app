@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import MyListContainer from './MyListContainer'
+import PostListContainer from './PostListContainer'
 import './App.scss';
+import classNames from "classnames"
 
 export default class App extends Component {
   constructor(props) {
@@ -10,10 +11,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <MyListContainer />
+        < PostListContainer/>
       </div>
     )
   }
 
 }
-

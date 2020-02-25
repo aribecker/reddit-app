@@ -21,4 +21,3 @@ const dismissPostUnsafe = post => ({
 export const dismissPost = post => (dispatch, getState) => {
   dispatch(dismissPostUnsafe(post))
 }
-

@@ -41,4 +41,3 @@ export default combineReducers({
 export const getPosts = state => {
   return state.posts
 }
-
