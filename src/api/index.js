@@ -1,22 +1,52 @@
 /**
  * client-server processing
  */
-import _items from './items.json'
+//import _items from './items.json'
 import axios from 'axios'
 import _ from 'lodash' 
 const TIMEOUT = 100
 
 
-export default {
-  getItems: (cb, action = 'todos' ,id = 1, timeout) => setTimeout(
-    () => {
-      // TODO: Handle errors
-      //const url=`https://jsonplaceholder.typicode.com/${action}/${id}`;
-      //axios.get(url).then( result => {
-      //  cb([result.data])
-      //})
-      cb(_items)
-    },
-    timeout || 1000 // Simulate lag
+function getPostsFromData(data) {
+  return _.map(
+    data.children,
+    post => {
+      const {
+        id,
+        title,
+        author,
+        created_utc,
+        thumbnail,
+        name,
+        url,
+        num_comments
+      } = post.data
+      return {
+        kind: post.kind,
+        id,
+        title,
+        author,
+        created_utc,
+        thumbnail,
+        name,
+        url,
+        num_comments
+      }
+    }
   )
 }
+
+export default {
+  getPosts: (cb, timeout) => {
+    setTimeout(
+      () => {
+        const url=`https://www.reddit.com/r/all/top.json?&limit=50`;
+        axios.get(url).then( result => {
+          cb(getPostsFromData(result.data.data))
+        })
+      },
+      timeout || 100 // Simulate lag
+    )
+  }
+}
+
