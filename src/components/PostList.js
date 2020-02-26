@@ -19,7 +19,7 @@ export default class PostList extends Component {
       <div
         className="post-list"
       >
-        <h3>{title}</h3>
+        <h5>{title}</h5>
           {posts && posts.map(post => 
             <PostListItem
               key={post.id}

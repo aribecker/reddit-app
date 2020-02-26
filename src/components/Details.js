@@ -16,15 +16,15 @@ export default class Details extends Component {
     return (
       <div className="details">
 
-        <div>
+        <div className="author">
           {post.author}
         </div>
 
-        <div>
+        <div className="image">
           <img src={post.thumbnail}/>
         </div>
         
-        <div>
+        <div className="title">
           {post.title}
         </div>
 

@@ -48,10 +48,17 @@ Update: This item will be implemented in STEP 6
  * Forgot to include Read status
 
 ## STEP 4: STYLING. Estimated 1 hr
+It took me 45 mins
 
 * List styling
 * Details panel styling
 Update: I'll make just a basic styling here and leave the details for step 6
+
+Details left for later:
+  - Center vertically the title in the left panel
+  - Show blue dot at the left of the author for unread posts
+  - X and circle at the left of the dismiss text
+  - Right Chevron at the right of the title
 
 ## STEP 5: PAGINATION. Estimated 2hrs
 

@@ -10,4 +10,70 @@ $postWidthMobile: 190px;
   @include media-breakpoint-down(sm) {
     width: $postWidthMobile;
   }
+  
+  .dismiss {
+    cursor: pointer;
+  }
+  
+  hr {
+    border-top: 1px solid grey;
+  }
+  
+  
+  .post-item {
+    cursor: pointer;
+
+    .padded-row {
+      padding-bottom: 0.3em;
+    }
+
+    .author {
+      display: inline-block;
+    }
+
+    .created {
+      display: inline-block;
+      padding-left: 0.7em;
+      font-size: 0.8em;
+    }
+
+    .thumbnail {
+      display: inline-block;
+      vertical-align: top;
+      img {
+        width: 70px;
+        vertical-align: top;
+        display: block;
+      }
+    }
+
+    .title {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 70px);
+      vertical-align: center;
+      font-size: 0.8em;
+      padding-left: 0.7em;
+    }
+    
+    .dismiss {
+      display: inline-block;
+      padding-right: 0.7em;
+    }
+    
+    .comments {
+      display: inline-block;
+      color: orange;
+    }
+    
+    &.seen {
+      .author, .title, .created {
+        color: grey;
+      }
+    }
+
+  }
+  
+  
+  
 }
